@@ -33,7 +33,7 @@ variable "port" {
   default     = 3000
 
   validation {
-    condition     = var.port >= 1024 && var.port <= 65535
+    condition     = var.port >= 1024 && var.port + var.nb_containers - 1 <= 65534
     error_message = "The port must be between 1024 and 65535."
   }
 }
