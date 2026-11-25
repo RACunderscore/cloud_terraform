@@ -1,3 +1,4 @@
+
 resource "docker_image" "nginx" {
   name = var.image_used
 }
